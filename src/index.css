@@ -16,9 +16,10 @@ body {
 
 main {
   width: 450px;
-  height:  700px;
+  height:  500px;
   background-color: #eee;
   border-radius: 10px;
+  position: relative;
 }
 
 header {
@@ -54,7 +55,8 @@ form input {
   margin: .5rem auto;
   height: 2rem;
   width: 70%;
-  border: skyblue solid 1px;
+  /* border: skyblue solid 1px; */
+  border: none;
   border-radius: 4px;
   opacity: 0.7;
   padding: 0 10px;
@@ -62,10 +64,30 @@ form input {
 }
 
 form button {
-  width: 8rem;
+  width: 6.2rem;
   margin: 2rem auto;
+  height: 1.9rem;
+  opacity: 0.8;
+  border: 1px solid skyblue;
+  border-radius: 4px;
+  background-color: skyblue;
+  color: snow;
+}
+form button.ok {
+  opacity: 1;
+  background: rgb(21, 63, 180);
+}
+
+
+section {
+  color: orangered;
+  text-align: center;
+  display: block;
+  margin: 1rem auto;
 }
 
 footer {
   text-align: center;
+  font-size: 12px;
+  /* background-color: #fff; */
 }
