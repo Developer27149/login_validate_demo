@@ -3,13 +3,8 @@
 This project has been created using **webpack-cli**, you can now run
 
 ```
-npm run build
+yarn start
 ```
 
-or
-
-```
-yarn build
-```
-
-to bundle your application
+![](https://i.loli.net/2021/06/02/a2pQjSzb3ZPVfC1.png)
+![](https://i.loli.net/2021/06/02/cimGA4wqBgKdsfT.png)

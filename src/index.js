@@ -3,14 +3,13 @@ import React, { useState,useEffect } from "react";
 import { render } from "react-dom";
 
 function App() {
-    const [state, setState] = useState("");
+    const [state, setState] = useState(true);
     useEffect(() => {
-      const user = document.querySelector("#username")
-      user.addEventListener('input', (evt) => {
-        console.log(user.validationMessage);
-        if(user.validity.tooShort) {
+      const userInput = document.querySelector("#username")
+      userInput.addEventListener('input', (evt) => {
+        if(userInput.validity.tooShort) {
           // user.setCustomValidity("")
-          setState("username field is too short..")
+          setState("username is too short.")
         } else {
           // user.setCustomValidity("")
           setState(true)
@@ -34,11 +33,11 @@ function App() {
       <form onSubmit={sub} noValidate>
         <input type="text" minLength="2" placeholder="username" id="username" required/>
         <input type="password" minLength="2" placeholder="password" id="password" required/>
-        <input type="email" placeholder="your email" id="email" required/>
-        <button className={state === true ? "canClick": "nerverClick"}>Login</button>
+        <input type="email" placeholder="email" id="email" required/>
+        <button>submit</button>
       </form>
       {
-        state && <section>{state} 🤔</section>
+        state !== true && <section>{state + " 🤔"}</section>
       }
       <footer>
         <a href="#">Forget your password?</a>
